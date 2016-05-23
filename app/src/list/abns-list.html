@@ -1,0 +1,26 @@
+<div class="table-wrapper" st-table="list.rows" st-pipe="list.callServer">
+  <table class="table">
+    <thead>
+      <tr>
+        <th ng-repeat="column in list.columns"
+            st-sort="{{column.sortable ? column.id : undefined}}"
+            st-skip-natural="true"
+            ng-class="::{sortable: column.sortable}">
+          <span class="column-wrapper">
+            <span class="column-title" translate-once="{{column.title}}"></span>
+            <span class="sort-arrows" ng-if="::column.sortable">
+              <i class="material-icons sort-desc">arrow_drop_down</i>
+              <i class="material-icons sort-asc">arrow_drop_up</i>
+            </span>
+          </span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="row in list.rows">
+        <td ng-repeat="column in list.columns" ng-bind="list.getColumnValue(row, column)">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,15 +1,27 @@
 {
-  "name": "angular-seed",
-  "description": "A starter project for AngularJS",
+  "name": "abn-webapp",
+  "description": "An application for studying bayesian algebraic networks",
   "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-seed",
+  "homepage": "https://github.com/nitoloz/abn-webapp",
   "license": "MIT",
   "private": true,
-  "dependencies": {
-    "angular": "~1.4.0",
-    "angular-route": "~1.4.0",
-    "angular-loader": "~1.4.0",
-    "angular-mocks": "~1.4.0",
-    "html5-boilerplate": "~5.2.0"
+  "dependencies": {},
+  "devDependencies": {
+    "angular": "^1.5.5",
+    "angular-ui-router": "^0.3.0",
+    "angular-loader": "^1.5.5",
+    "angular-mocks": "^1.5.5",
+    "html5-boilerplate": "^5.3.0",
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.4",
+    "angular-translate": "^2.11.0",
+    "angular-translate-loader-static-files": "^2.11.0",
+    "angular-notify": "^2.5.0",
+    "angular-smart-table": "^2.1.8",
+    "angular-translate-once": "^1.0.3",
+    "lodash": "^4.13.0"
+  },
+  "resolutions": {
+    "angular": "^1.5.5"
   }
 }
