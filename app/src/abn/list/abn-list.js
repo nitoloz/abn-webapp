@@ -1,18 +1,18 @@
 angular.module('abnWebapp')
-    .config(['$stateProvider', function($stateProvider) {
+    .config(['$stateProvider', function ($stateProvider) {
         $stateProvider
             .state('list', {
                 url: '/list',
                 views: {
                     "main": {
-                        templateUrl: 'list/abns-list.html',
+                        templateUrl: 'abn/list/abn-list.html',
                         controller: 'ABNList',
                         controllerAs: 'list'
                     }
                 },
                 resolve: {
-                    rows: function(listService) {
-                        return listService.getRows();
+                    rows: function (abnService) {
+                        return abnService.getList();
                     }
                 }
             });
@@ -20,10 +20,10 @@ angular.module('abnWebapp')
     .controller('ABNList', ABNList);
 
 /* @ngInject */
-function ABNList($filter, rows, listService, abnColumns) {
+function ABNList($filter, rows, abnService, abnColumns) {
     var self = this;
 
-    var init = function() {
+    var init = function () {
         self.columns = abnColumns;
         self.rows = rows;
 
@@ -43,7 +43,7 @@ function ABNList($filter, rows, listService, abnColumns) {
     }
 
     function callServer(tableState, ctrl) {
-        listService.getRows().then(function() {
+        abnService.getList().then(function () {
             self.rows = rows;
         });
     }

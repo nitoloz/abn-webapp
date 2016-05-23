@@ -4,5 +4,7 @@
 
   "NAME": "Имя",
   "VERTICES_COUNT": "Количество вершин",
-  "DATE_CREATED": "Дата создания"
+  "DATE_CREATED": "Дата создания",
+
+  "START_WORKFLOW":"Начать работу"
 }

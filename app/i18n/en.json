@@ -4,5 +4,8 @@
 
   "NAME": "Name",
   "VERTICES_COUNT": "Vertices count",
-  "DATE_CREATED": "Date created"
+  "DATE_CREATED": "Date created",
+
+  "START_WORKFLOW":"Start workflow"
+
 }
