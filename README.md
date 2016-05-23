@@ -1,9 +1,7 @@
 To run application locally:
 
-1) Run npm start in console or via npm tasks panel in IDE
+1) Run npm install
 
-2) Run grunt watch in another console tab
+2) Run grunt watch
 
-3) Go to http://localhost:8000/build
-
-4) Profit
+3) Profit

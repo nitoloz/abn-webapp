@@ -1,4 +1,4 @@
-module.exports = function (grunt) {
+module.exports = function(grunt) {
     return {
         pkg: grunt.file.readJSON("./package.json"),
 
@@ -347,5 +347,16 @@ module.exports = function (grunt) {
                 }
             }
         },
+        'http-server': {
+            'dev': {
+                root: '<%= build_dir %>',
+                port: 8282,
+                host: "127.0.0.1",
+                showDir: true,
+                autoIndex: true,
+                runInBackground: true,
+                openBrowser: true
+            }
+        }
     }
 };
