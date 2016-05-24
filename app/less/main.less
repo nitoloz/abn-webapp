@@ -16,50 +16,6 @@ nav.navbar-default {
   }
 }
 
-/**
- * ABN List
- */
-.table-wrapper {
-  padding: 100px 50px 0;
-
-  > table {
-    border: 1px solid black;
-    > thead {
-      background-color: #61B7CF;
-      > tr > th {
-        border-bottom: 1px solid black;
-        cursor: pointer;
-        .column-wrapper {
-          .sort-arrows {
-            position: relative;
-            i.material-icons {
-              position: absolute;
-              color: #878787;
-
-              &.sort-desc {
-                top: 0;
-              }
-              &.sort-asc {
-                bottom: 0
-              }
-            }
-          }
-        }
-
-        &.st-sort-ascent .sort-asc, &.st-sort-descent .sort-desc {
-          color: #000!important;
-        }
-      }
-    }
-
-    > tbody > tr {
-      &:hover, &:focus {
-        background: #eee;
-      }
-      > td {
-        border-bottom: 1px solid black;
-        cursor: pointer;
-      }
-    }
-  }
+.sort-icon {
+  vertical-align: middle;
 }

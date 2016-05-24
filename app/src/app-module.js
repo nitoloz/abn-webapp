@@ -8,9 +8,8 @@ angular.module('abnWebapp', [
     .controller('AppCtrl', AppCtrl);
 
 /* @ngInject */
-function config($translateProvider, $httpProvider, $urlRouterProvider) {
+function config($translateProvider, $httpProvider, $urlRouterProvider, $stateProvider) {
     $urlRouterProvider.otherwise('/list');
-
     $translateProvider.useStaticFilesLoader({
         prefix: 'i18n/',
         suffix: '.json'

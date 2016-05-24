@@ -1,6 +1,7 @@
 {
   "TITLE": "ABN Web Application",
   "NAVBAR_TITLE": "Algebraic Bayesian Networks",
+  "LIST_PANEL_TITLE": "List of ABN",
 
   "NAME": "Name",
   "VERTICES_COUNT": "Vertices count",

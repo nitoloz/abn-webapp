@@ -29,6 +29,7 @@ function ABNList($filter, rows, abnService, abnColumns) {
 
         self.callServer = callServer;
         self.getColumnValue = getColumnValue;
+        self.sort = sort;
     };
 
     init();
@@ -46,5 +47,9 @@ function ABNList($filter, rows, abnService, abnColumns) {
         abnService.getList().then(function () {
             self.rows = rows;
         });
+    }
+
+    function sort(columnId, asc) {
+        self.rows = _.sortBy(self.rows, columnId);
     }
 }
