@@ -17,6 +17,15 @@
         <div class="navbar-header">
           <a class="navbar-brand" href="#" translate-once="NAVBAR_TITLE"></a>
         </div>
+        <div class="collapse navbar-collapse">
+          <p class="navbar-text navbar-right navbar-user" ng-if="app.principal.isAuthenticated()">
+            <img class="user-photo" src="http://cs627327.vk.me/v627327173/2b48c/EMbIhDHYhE4.jpg">
+            <span ng-bind="app.principal.identity.name"></span>
+            <a href="#" ng-click="app.principal.signOut()">
+              <i class="material-icons sign-out">file_upload</i>
+            </a>
+          </p>
+        </div>
       </div>
     </nav>
 

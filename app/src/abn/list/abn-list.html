@@ -1,47 +1,45 @@
-<div class="row">
-    <div class="col-md-12">
+<div class="row abn-list">
+  <div class="col-md-12">
 
-    </div>
-    <div class="col-md-12">
-        <div class="panel panel-primary">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h4 translate-once="LIST_PANEL_TITLE"></h4>
-                    </div>
-                    <div class="col-md-8">
-                        <button type="button" class="btn btn-default pull-right" ui-sref="edit"
-                                translate-once="START_WORKFLOW"></button>
-                    </div>
-                </div>
-            </div>
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-md-12">
-                        <table class="table table-hover">
-                            <thead>
-                            <tr>
-                                <th ng-repeat="column in list.columns"
-                                    ng-class="::{sortable: column.sortable}">
-                                    <span translate-once="{{column.title}}"></span>
-                                    <span ng-if="::column.sortable">
-                                      <i class="material-icons sort-icon" ng-click="sort(column.id,true)">arrow_drop_down</i>
-                                      <i class="material-icons sort-icon"
-                                         ng-click="sort(column.id,false)">arrow_drop_up</i>
-                                    </span>
-                                </th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr ng-repeat="row in list.rows">
-                                <td ng-repeat="column in list.columns" ng-bind="list.getColumnValue(row, column)">
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+  </div>
+  <div class="col-md-12">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-md-4">
+            <h4 translate-once="LIST_PANEL_TITLE"></h4>
+          </div>
+          <div class="col-md-8">
+            <button type="button" class="btn btn-default pull-right" ui-sref="edit"
+                    translate-once="START_WORKFLOW"></button>
+          </div>
         </div>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th ng-repeat="column in list.columns" ng-click="column.sortable && list.sort(column.id)">
+                    <span translate-once="{{column.title}}"></span>
+                    <span ng-if="::column.sortable" class="sort-icons" ng-class="list.getSortColumnClass(column)">
+                      <i class="material-icons sort-icon sort-desc">arrow_drop_down</i>
+                      <i class="material-icons sort-icon sort-asc">arrow_drop_up</i>
+                    </span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="row in list.rows">
+                  <td ng-repeat="column in list.columns" ng-bind="list.getColumnValue(row, column)">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

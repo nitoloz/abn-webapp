@@ -7,7 +7,9 @@ module.exports = function(grunt) {
     grunt.config.init(grunt.util._.extend(taskConfig, userConfig));
 
     grunt.renameTask('watch', 'delta');
+
     grunt.registerTask('watch', ['build', 'http-server:dev', 'delta']);
+    grunt.registerTask('watch-npm', ['build', 'delta']);
 
     grunt.registerTask('copyBuild', [
         'copy:build_app_assets',

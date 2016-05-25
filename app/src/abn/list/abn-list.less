@@ -1,0 +1,23 @@
+.abn-list {
+  th {
+    cursor: pointer;
+    .sort-icons {
+      position: relative;
+      > i.sort-icon {
+        vertical-align: middle;
+        position: absolute;
+        opacity: 0.2;
+        &.sort-desc {
+          top: 0;
+        }
+        &.sort-asc {
+          bottom: 0;
+        }
+      }
+
+      &.sort-desc i.sort-desc, &.sort-asc i.sort-asc {
+        opacity: 1;
+      }
+    }
+  }
+}

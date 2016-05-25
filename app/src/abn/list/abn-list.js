@@ -20,19 +20,31 @@ angular.module('abnWebapp')
     .controller('ABNList', ABNList);
 
 /* @ngInject */
-function ABNList($filter, rows, abnService, abnColumns) {
+function ABNList($filter, rows, abnColumns) {
     var self = this;
+
+    var DEFAULT_SORT_COLUMN = 'name';
 
     var init = function () {
         self.columns = abnColumns;
         self.rows = rows;
+        self.currentSort = {};
 
-        self.callServer = callServer;
         self.getColumnValue = getColumnValue;
+        self.getSortColumnClass = getSortColumnClass;
         self.sort = sort;
+
+        sort(DEFAULT_SORT_COLUMN);
     };
 
     init();
+
+    function getSortColumnClass(column) {
+        if (column.id === self.currentSort.predicate) {
+            return self.currentSort.reverse ? 'sort-desc' : 'sort-asc';
+        }
+        return null;
+    }
 
     function getColumnValue(row, column) {
         switch (column.id) {
@@ -43,13 +55,17 @@ function ABNList($filter, rows, abnService, abnColumns) {
         }
     }
 
-    function callServer(tableState, ctrl) {
-        abnService.getList().then(function () {
-            self.rows = rows;
-        });
-    }
+    function sort(columnId) {
+        if (columnId === self.currentSort.predicate) {
+            self.currentSort.reverse = !self.currentSort.reverse;
+        } else {
+            self.currentSort = {
+                predicate: columnId,
+                reverse: false
+            };
+        }
 
-    function sort(columnId, asc) {
-        self.rows = _.sortBy(self.rows, columnId);
+        var order = self.currentSort.reverse ? 'desc' : 'asc';
+        self.rows = _.orderBy(self.rows, columnId, order);
     }
 }

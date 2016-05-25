@@ -12,10 +12,28 @@ nav.navbar-default {
   .navbar-brand {
     &, &:hover, &:focus {
       color: white;
+      font-size: 20px;
+      height: 60px;
+      padding: 20px 15px;
+    }
+  }
+
+  .navbar-user {
+    font-weight: bold;
+    color: #fff;
+    .user-photo {
+      height: 28px;
+      border-radius: 50%;
+    }
+
+    > a {
+      color: #fff;
+      i.sign-out {
+        transform: rotate(90deg);
+        vertical-align: middle;
+      }
     }
   }
 }
 
-.sort-icon {
-  vertical-align: middle;
-}
+@import "../src/abn/list/abn-list";

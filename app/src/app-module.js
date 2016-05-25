@@ -22,4 +22,14 @@ function config($translateProvider, $httpProvider, $urlRouterProvider, $statePro
 
 /* @ngInject */
 function AppCtrl() {
+    //TODO: Redactor to service when API for auth will done
+    this.principal = {
+        identity: {
+            name: 'Andrey Zolotin'
+        },
+        isAuthenticated: function() {
+            return true;
+        },
+        signOut: angular.noop
+    };
 }
