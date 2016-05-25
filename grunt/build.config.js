@@ -36,7 +36,8 @@ module.exports = {
                 'vendor/angular-translate-once/src/translate-once.js',
                 'vendor/angular-ui-router/release/angular-ui-router.js',
                 'vendor/jquery/dist/jquery.js',
-                'vendor/lodash/lodash.js'
+                'vendor/lodash/lodash.js',
+                'vendor/angular-bootstrap/ui-bootstrap-tpls.js'
             ],
             minified: [
                 'vendor/angular/angular.min.js',
@@ -47,7 +48,8 @@ module.exports = {
                 'vendor/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js',
                 'vendor/angular-ui-router/release/angular-ui-router.min.js',
                 'vendor/jquery/dist/jquery.min.js',
-                'vendor/lodash/lodash.min.js'
+                'vendor/lodash/lodash.min.js',
+                'vendor/angular-bootstrap/ui-bootstrap-tpls.min.js'
             ],
             toMinify: [
                 'vendor/angular-translate-once/src/translate-once.js'

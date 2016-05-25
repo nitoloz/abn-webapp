@@ -20,7 +20,7 @@ angular.module('abnWebapp')
     .controller('ABNList', ABNList);
 
 /* @ngInject */
-function ABNList($filter, rows, abnColumns) {
+function ABNList($filter, $state, rows, abnColumns) {
     var self = this;
 
     var DEFAULT_SORT_COLUMN = 'name';
@@ -32,12 +32,17 @@ function ABNList($filter, rows, abnColumns) {
 
         self.getColumnValue = getColumnValue;
         self.getSortColumnClass = getSortColumnClass;
+        self.openABN = openABN;
         self.sort = sort;
 
         sort(DEFAULT_SORT_COLUMN);
     };
 
     init();
+
+    function openABN() {
+        $state.go('edit');
+    }
 
     function getSortColumnClass(column) {
         if (column.id === self.currentSort.predicate) {

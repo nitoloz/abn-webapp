@@ -2,13 +2,13 @@ angular.module('abnWebapp', [
         'templates-app',
         'pascalprecht.translate',
         'ui.router',
-        'smart-table'
+        'ui.bootstrap'
     ])
     .config(config)
     .controller('AppCtrl', AppCtrl);
 
 /* @ngInject */
-function config($translateProvider, $httpProvider, $urlRouterProvider, $stateProvider) {
+function config($translateProvider, $httpProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/list');
     $translateProvider.useStaticFilesLoader({
         prefix: 'i18n/',

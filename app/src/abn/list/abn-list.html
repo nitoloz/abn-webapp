@@ -31,7 +31,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr ng-repeat="row in list.rows">
+                <tr ng-repeat="row in list.rows" ng-click="list.openABN(row.id)">
                   <td ng-repeat="column in list.columns" ng-bind="list.getColumnValue(row, column)">
                   </td>
                 </tr>

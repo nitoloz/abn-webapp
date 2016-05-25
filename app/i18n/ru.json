@@ -7,5 +7,10 @@
   "VERTICES_COUNT": "Количество вершин",
   "DATE_CREATED": "Дата создания",
 
-  "START_WORKFLOW":"Начать работу"
+  "START_WORKFLOW":"Начать работу",
+
+  "LOCAL": "Локальная",
+  "SECONDARY": "Вторичная",
+  "TERTIARY": "Третичная",
+  "QUATERNARY": "Четвертичная"
 }

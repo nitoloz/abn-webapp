@@ -7,6 +7,10 @@
   "VERTICES_COUNT": "Vertices count",
   "DATE_CREATED": "Date created",
 
-  "START_WORKFLOW":"Start workflow"
+  "START_WORKFLOW":"Start workflow",
 
+  "LOCAL": "Local",
+  "SECONDARY": "Secondary",
+  "TERTIARY": "Tertiary",
+  "QUATERNARY": "Quaternary"
 }

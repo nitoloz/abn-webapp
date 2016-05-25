@@ -1,20 +1,33 @@
-<div class="row">
-    <div class="col-md-12">
-        <div class="panel panel-primary">
-            <div class="panel-heading">
+<div class="abn-edit">
+  <div class="">
+    <div class="abn-title" ng-bind="abnCtrl.abn.name"></div>
 
-            </div>
+    <uib-tabset>
+      <uib-tab heading="{{'LOCAL' | translate}}">
+      </uib-tab>
+      <uib-tab heading="{{'SECONDARY' | translate}}">
+      </uib-tab>
+      <uib-tab heading="{{'TERTIARY' | translate}}">
+      </uib-tab>
+      <uib-tab heading="{{'QUATERNARY' | translate}}">
+      </uib-tab>
+    </uib-tabset>
 
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div ui-view="controls"></div>
-                    </div>
-                    <div class="col-md-6">
-                        <div ui-view="chart"></div>
-                    </div>
-                </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div ui-view="controls"></div>
+              </div>
+              <div class="col-md-6">
+                <div ui-view="chart"></div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>

@@ -7,7 +7,7 @@ angular.module('abnWebapp')
                     "main": {
                         templateUrl: 'abn/edit/abn-edit.html',
                         controller: 'ABNEdit',
-                        controllerAs: 'list'
+                        controllerAs: 'abnCtrl'
                     }
                 },
                 params: {selectedId: null},
@@ -21,7 +21,7 @@ angular.module('abnWebapp')
     .controller('ABNEdit', ABNEdit);
 
 /* @ngInject */
-function ABNEdit($filter, abn, abnColumns) {
+function ABNEdit(abn) {
     var self = this;
 
     var init = function () {
