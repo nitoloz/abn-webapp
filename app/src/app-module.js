@@ -1,5 +1,6 @@
 angular.module('abnWebapp', [
         'templates-app',
+        'abn-charts',
         'pascalprecht.translate',
         'ui.router',
         'ui.bootstrap'
@@ -14,7 +15,7 @@ function config($translateProvider, $httpProvider, $urlRouterProvider) {
         prefix: 'i18n/',
         suffix: '.json'
     });
-    $translateProvider.preferredLanguage('en');
+    $translateProvider.preferredLanguage('ru');
     $translateProvider.useSanitizeValueStrategy('escaped');
 
     $httpProvider.defaults.headers.post['Content-Type'] = 'application/json';
@@ -27,7 +28,7 @@ function AppCtrl() {
         identity: {
             name: 'Andrey Zolotin'
         },
-        isAuthenticated: function() {
+        isAuthenticated: function () {
             return true;
         },
         signOut: angular.noop

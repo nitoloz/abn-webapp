@@ -23,7 +23,12 @@ angular.module('abnWebapp')
 /* @ngInject */
 function ABNEdit(abn) {
     var self = this;
-
+    this.model = {
+        title: 'my chart',
+        data: [],
+        dataChanged: 0,
+        alphabet: 'abcd'
+    };
     var init = function () {
         self.abn = abn;
     };

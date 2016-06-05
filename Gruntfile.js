@@ -18,7 +18,7 @@ module.exports = function(grunt) {
         'copy:build_app_js',
         'copy:build_app_json',
         'copy:build_vendor_js',
-        'copy:build_vendor_img',
+        'copy:build_vendor_img'
     ]);
 
     grunt.registerTask('build', function(arg) {
@@ -47,7 +47,7 @@ module.exports = function(grunt) {
         'ngAnnotate',
         'uglify',
         'concat',
-        'index:bin',
+        'index:bin'
     ]);
 
     grunt.registerMultiTask('index', 'Process index.html template', function() {

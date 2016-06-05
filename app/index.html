@@ -1,34 +1,35 @@
 <!DOCTYPE html >
 <html ng-app="abnWebapp" ng-controller="AppCtrl as app">
-  <head>
+<head>
     <title translate-once="TITLE"></title>
 
     <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
     <link rel="stylesheet" type="text/css" href="<%= file %>"/>
     <% }); %>
 
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
     <script type="text/javascript" src="<%= file %>"></script>
     <% }); %>
-  </head>
-  <body>
-    <nav class="navbar navbar-default ">
-      <div class="container-fluid">
+</head>
+<body>
+<nav class="navbar navbar-default ">
+    <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#" translate-once="NAVBAR_TITLE"></a>
+            <a class="navbar-brand" href="#" translate-once="NAVBAR_TITLE"></a>
         </div>
         <div class="collapse navbar-collapse">
-          <p class="navbar-text navbar-right navbar-user" ng-if="app.principal.isAuthenticated()">
-            <img class="user-photo" src="http://cs627327.vk.me/v627327173/2b48c/EMbIhDHYhE4.jpg">
-            <span ng-bind="app.principal.identity.name"></span>
-            <a href="#" ng-click="app.principal.signOut()">
-              <i class="material-icons sign-out">file_upload</i>
-            </a>
-          </p>
+            <p class="navbar-text navbar-right navbar-user" ng-if="app.principal.isAuthenticated()">
+                <img class="user-photo" src="http://cs627327.vk.me/v627327173/2b48c/EMbIhDHYhE4.jpg">
+                <span ng-bind="app.principal.identity.name"></span>
+                <a href="#" ng-click="app.principal.signOut()">
+                    <i class="material-icons sign-out">file_upload</i>
+                </a>
+            </p>
         </div>
-      </div>
-    </nav>
+    </div>
+</nav>
 
-    <div class="container-fluid main-content" ui-view="main"></div>
-  </body>
+<div class="container-fluid" ui-view="main"></div>
+</body>
 </html>

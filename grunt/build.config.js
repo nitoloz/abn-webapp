@@ -13,7 +13,7 @@ module.exports = {
         templates: ['app/src/**/*.html', '!app/index.html'],
         html: ['app/index.html'],
 
-        less: 'app/less/main.less',
+        less: ['app/src/**/*.less', 'app/less/main.less'],
 
         fonts: 'app/less/fonts/*'
     },
@@ -55,11 +55,8 @@ module.exports = {
                 'vendor/angular-translate-once/src/translate-once.js'
             ]
         },
-        img: [
-        ],
-        css: {
-        },
-        fonts: [
-        ]
+        img: [],
+        css: {},
+        fonts: []
     }
 };
